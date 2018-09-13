@@ -206,7 +206,9 @@ namespace SimpleCalculator
             double opr1;
             if (double.TryParse(txtInput.Text, out opr1))
             {
-                txtInput.Text = (Math.Sqrt(opr1)).ToString();
+                //txtInput.Text = (Math.Sqrt(opr1)).ToString();
+                calcRef.SquareRoot(opr1);
+                
             }
         }
 
@@ -215,7 +217,8 @@ namespace SimpleCalculator
             double opr1;
             if (double.TryParse(txtInput.Text, out opr1))
             {
-                txtInput.Text = (opr1 / 2).ToString();
+                calcRef.Halve(opr1);
+                //txtInput.Text = (opr1 / 2).ToString();
             }
         }
 
@@ -224,13 +227,11 @@ namespace SimpleCalculator
             double opr1;
             if (double.TryParse(txtInput.Text, out opr1))
             {
-                txtInput.Text = (opr1 / 4).ToString();
+                calcRef.Quarter(opr1);
+                //txtInput.Text = (opr1 / 4).ToString();
             }
         }
 
-        private void btnThree_Click(object sender, EventArgs e)
-        {
-
-        }
+     
     }
 }
